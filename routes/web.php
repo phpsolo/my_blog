@@ -28,4 +28,14 @@ Route::namespace('Admin')->group(function () {
 	Route::get('/Admin/Index/index', 'IndexController@index');
 	Route::get('/Admin/Index', 'IndexController@index');
 	Route::get('/Admin', 'IndexController@index');
+	Route::get('/Admin/Article/index', 'ArticleController@index');
+	Route::get('/Admin/Article/create', 'ArticleController@create');
+	Route::post('/Admin/Article/doCreate', 'ArticleController@doCreate');
+	Route::get('/Admin/User/index', 'UserController@index');
+	Route::get('/Admin/User/create', 'UserController@create');
+	Route::post('/Admin/User/create', 'UserController@create');
+	Route::get('/Admin/Assess/index', 'AssessController@index');
+	Route::get('/Admin/Type/index', 'TypeController@index');
+	Route::get('/Admin/Type/create', 'TypeController@create');
+	Route::post('/Admin/Type/doCreate', 'TypeController@doCreate');
 });

@@ -15,8 +15,9 @@
         <script src="{{asset('admin/js/shopFrame.js')}}" type="text/javascript"></script>
         <script src="{{asset('admin/js/jquery.nicescroll.js')}}" type="text/javascript"></script>
         <script type="text/javascript" src="{{asset('admin/js/jquery.cookie.js')}}"></script> 
+        @section('header')
         <title>个人博客后台首页</title>
-        @yield('header')
+        @show()
     </head>
 <body id="menu_style">
     @section('content')
@@ -49,7 +50,7 @@
                 <div class="list_content">    
                     <dl class="nav nav-list" id="menu_list">
                         <dt>
-                            <a href="{{url('/Admin/Index/index')}}" class="iframeurl" title=""><i class="fa fa-home"></i><span class="menu-text">商城首页</span></a>
+                            <a href="{{url('/Admin/Index/index')}}" class="iframeurl" title=""><i class="fa fa-home"></i><span class="menu-text">首页</span></a>
                         </dt>
                          
                         <dt class="nav_link">
@@ -57,7 +58,7 @@
                         </dt>
                         <dd class="submenu">
                             <ul>
-                                <li class="home"><a href="javascript:void(0)" name="system_info.html" title="订单报表" class="iframeurl"><i class="fa fa-angle-double-right"></i>评论列表</a></li>
+                                <li class="home"><a href="javascript:void(0)" name="{{asset('/Admin/Assess/index')}}" title="订单报表" class="iframeurl"><i class="fa fa-angle-double-right"></i>评论列表</a></li>
                             </ul>
                         </dd>
                         <dt class="nav_link">
@@ -65,7 +66,7 @@
                         </dt>
                         <dd class="submenu">
                             <ul>
-                                <li class="home"><a href="javascript:void(0)" name="member_list.html" title="会员列表" class="iframeurl"><i class="fa fa-angle-double-right"></i>会员列表</a></li>
+                                <li class="home"><a href="javascript:void(0)" name="{{asset('/Admin/User/index')}}" title="会员列表" class="iframeurl"><i class="fa fa-angle-double-right"></i>会员列表</a></li>
                                 <!-- <li class="home"><a href="javascript:void(0)" name="Columns.html" title="等级管理" class="iframeurl"><i class="fa fa-angle-double-right"></i>等级管理</a></li> -->
                                 <!-- <li class="home"><a href="javascript:void(0)" name="Category_Manage.html" title="会员记录" class="iframeurl"><i class="fa fa-angle-double-right"></i>会员记录</a></li> -->
                             </ul>
@@ -85,7 +86,8 @@
                         </dt>
                         <dd class="submenu">
                             <ul>
-                                <li class="home"><a href="javascript:void(0)" name="Article_list.html" title="文章列表" class="iframeurl"><i class="fa fa-angle-double-rightt"></i>文章列表</a></li>
+                                <li class="home"><a href="javascript:void(0)" name="{{url('/Admin/Article/index')}}" title="文章列表" class="iframeurl"><i class="fa fa-angle-double-rightt"></i>文章列表</a></li>
+                                <li class="home"><a href="javascript:void(0)" name="{{url('/Admin/Type/index')}}" title="分类列表" class="iframeurl"><i class="fa fa-angle-double-rightt"></i>分类列表</a></li>
                             </ul>
                         </dd>
                            
@@ -133,7 +135,7 @@
     @show
 </body>
 </html>
-@yield('js')
+@section('js')
 <script>
 //设置框架
  $(function() { 
@@ -179,6 +181,7 @@ $('#Exit_system').on('click', function(){
     });
 });
 </script>
+@show()
 <script type="text/javascript">
 $("#menu_style").niceScroll({  
     cursorcolor:"#888888",  
