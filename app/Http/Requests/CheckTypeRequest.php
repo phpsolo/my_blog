@@ -24,8 +24,8 @@ class CheckTypeRequest extends FormRequest
     public function rules()
     {
         $id = $this->route('id');
-        $unique = 'type,name';
-        if ($id) $unique = 'type,name,'.$id;
+        $unique = 'unique:type,name';
+        if ($id) $unique = 'unique:type,name,'.$id;
         return [
             'name' => [
                 'required',

@@ -32,8 +32,8 @@
                 <li class="clearfix">
                     <label class="label_name col-xs-1"><i>*</i>显示/隐藏：&nbsp;&nbsp;</label>
                     <div class="Add_content col-xs-11">
-                        <label><span>显示：</span><input checked style="padding:0;margin:0;vertical-align: middle;" name="status" type="radio" /></label>
-                        <label><span>隐藏：</span><input style="padding:0;margin:0;vertical-align: middle;" name="status" type="radio" /></label>
+                        <label><span>显示：</span><input checked style="padding:0;margin:0;vertical-align: middle;" name="status" type="radio" value="1" /></label>
+                        <label><span>隐藏：</span><input style="padding:0;margin:0;vertical-align: middle;" name="status" type="radio" value="2" /></label>
                     </div>
                 </li>
             </ul>
